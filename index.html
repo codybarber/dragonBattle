@@ -32,6 +32,11 @@ Hints at the bottom of this file.
         text-align: center;
       }
 
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+
     </style>
     <script src="angular.js" charset="utf-8"></script>
     <script>
@@ -107,9 +112,9 @@ Hints at the bottom of this file.
 
     <div ng-app="dragon-battle" ng-controller="dragonBattleController">
       <div ng-show="!gameOver">
-        Fight or Flight?<br>
-        <button ng-click="fight()" id='fight'>Fight!</button>
-        <button ng-click="flight()" id='flight'>Flight!</button><br>
+        Hero: {{heroHealth}}<br>Dragon: {{dragonHealth}}<br>
+        <button ng-click="fight()" id='fight'><img src="sword.png" /></button>
+        <button ng-click="flight()" id='flight'><img src="run.png" /></button><br>
         {{message}}<br>
         <img ng-src="{{imgUrl}}"><br>
       </div>
